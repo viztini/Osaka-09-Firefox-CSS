@@ -1,76 +1,70 @@
-<h1 align="center">Modern Modoki</h1>
+# Osaka ’09 — A Firefox CSS Theme
 
-<p align="center">
- <img alt="Firefox screenshot running Modern Modoki" src="https://user-images.githubusercontent.com/11209477/192164979-31f7c725-87c4-4513-aaed-d2c52a17a9b6.png" />
-</p>
+Osaka ’09 is a handcrafted Firefox CSS theme inspired by the late‑2000s aesthetic of glossy UI chrome, soft gradients, and playful skeuomorphism. It blends the charm of Windows‑era design with a distinctly Japanese‑influenced retro‑modern vibe — a look that feels like it could’ve shipped on a 2009 ultrabook straight out of Umeda.
 
-This project aims to bring the Modern Modoki (or close in appearance) theme back to Firefox using the amazing Redmond Firefox theme base, via Firefox's remaining UserChrome interface.
+This theme is built on top of three excellent community projects, remixing their ideas into something new while keeping the spirit of each:
 
-If you're using Pale Moon browser, Use **[Modoki Moon][mmm]** instead of this - a full fork of the original.
+- **[AeroFirefox](guide://action?prefill=Tell%20me%20more%20about%3A%20AeroFirefox)** — for its glassy translucency and polished Windows‑style chrome  
+- **[RetroThemesFirefox](guide://action?prefill=Tell%20me%20more%20about%3A%20RetroThemesFirefox)** — for its dedication to nostalgic UI design  
+- **[Modoki‑Firefox](guide://action?prefill=Tell%20me%20more%20about%3A%20Modoki%E2%80%91Firefox)** — for its clean structure and modular approach to styling  
 
-This theme pairs beautifully with the **[Chicago95 theme for XFCE][c95]**.
+---
 
-> [!IMPORTANT]  
-> In **Firefox 133** and above, there were significant changes to the layout. If you are using a Firefox version lower than this, then install **version 0.9**.
+## Features
 
- ℹ️ If you want compact density, set `browser.compactmode.show` to `true`.
+- **[Late‑2000s aesthetic](guide://action?prefill=Tell%20me%20more%20about%3A%20Late%E2%80%912000s%20aesthetic)** with glossy surfaces, soft shadows, and subtle gradients  
+- **[Custom tab styling](guide://action?prefill=Tell%20me%20more%20about%3A%20Custom%20tab%20styling)** inspired by Aero‑era window frames  
+- **[Refined toolbar layout](guide://action?prefill=Tell%20me%20more%20about%3A%20Refined%20toolbar%20layout)** with retro spacing and icon proportions  
+- **[Optional translucency effects](guide://action?prefill=Tell%20me%20more%20about%3A%20Optional%20translucency%20effects)** depending on your OS and Firefox setup  
+- **[Lightweight CSS‑only implementation](guide://action?prefill=Tell%20me%20more%20about%3A%20Lightweight%20CSS%E2%80%91only%20implementation)** — no extensions required  
 
-## 🐞 Bugs & Limitations
+---
 
-* MacOS is **not supported**. **Linux** and **Windows** is supported.
-  * This theme is primarily tested on **XFCE**. Other setups may encounter bugs.
-* This theme is **not compatible** with Firefox skins/themes, or a combined title bar.
-* Dark mode is not currently supported.
-  * on a PC set to dark mode, change the theme to light in Firefox Customise setting.
-* Vertical tabs are not supported.
-* The menu bar is expected to be visible. The bookmarks bar is optional.
-* There is some alignment issues with the URL bar, as Firefox keeps making changes to the layout (#32).
-* Due to the current reliance on low-res button images, this theme will look incredibly blurry on screen densities above 1080p.
-* Like the original Modern Modoki, not all icons are covered - especially not extensions.
+## Installation
 
-**If you experience graphical oddities please submit a bug report with screenshots + OS version.**
+1. **[Enable userChrome.css](guide://action?prefill=Tell%20me%20more%20about%3A%20Enable%20userChrome.css)** in Firefox  
+   - Go to `about:config`  
+   - Set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`  
 
-## 🚀 Installation
+2. **[Locate your profile folder](guide://action?prefill=Tell%20me%20more%20about%3A%20Locate%20your%20profile%20folder)**  
+   - Open `about:support`  
+   - Click “Profile Folder” → “Open Folder”  
 
-Note: These theme is **not supported on MacOS**. Also, if you are using Firefox on Linux via **Snap** or **Flatpak**, these instructions may not work.
+3. **[Create a chrome folder](guide://action?prefill=Tell%20me%20more%20about%3A%20Create%20a%20chrome%20folder)** (if it doesn’t already exist)  
+   - Inside your profile directory, create a folder named `chrome`  
 
-* (Windows & Linux) In Customize, turn on Title Bar and enable Menu bar under toolbars.
-* Download a zip copy of the theme (preferably from releases).
-* In Firefox, navigate to `about:support`.
-* Under 'Profile Directory' or 'Profile Folder', click on Open Directory/Folder button.
-* In this folder, drop the `chrome` folder from the theme here.
-* In Firefox again, navigate to `about:config`.
-* Search for `toolkit.legacyUserProfileCustomizations.stylesheets` and set to true.
-* Restart Firefox.
+4. **[Copy the theme files](guide://action?prefill=Tell%20me%20more%20about%3A%20Copy%20the%20theme%20files)**  
+   - Place `userChrome.css` and any additional assets from this repo into the `chrome` folder  
 
-If done correctly, you Firefox will now be skinned with Modern Modoki. **Please note this theme will not be included in synchronise**.
+5. **[Restart Firefox](guide://action?prefill=Tell%20me%20more%20about%3A%20Restart%20Firefox)** to apply the theme  
 
-## 🖌️ Customisation
+---
 
-### Hide menu button
+## Customization
 
-[Contributed idea by **AlexyBot**](https://github.com/soup-bowl/Modoki-Firefox/issues/8#issuecomment-1544206896), while Firefox supports menu bars, most functionality the menu button adds is duplicated. Therefore, you can hide the menu button. This can be achieved by adding this to the end of the **userChrome.css** file.
+Osaka ’09 is designed to be easily tweakable. You can adjust:
 
-```css
-#PanelUI-button { display: none !important; }
-```
+- **[Color accents](guide://action?prefill=Tell%20me%20more%20about%3A%20Color%20accents)**  
+- **[Tab shapes](guide://action?prefill=Tell%20me%20more%20about%3A%20Tab%20shapes)**  
+- **[Toolbar height](guide://action?prefill=Tell%20me%20more%20about%3A%20Toolbar%20height)**  
+- **[Translucency levels](guide://action?prefill=Tell%20me%20more%20about%3A%20Translucency%20levels)**  
 
-And comment out **lines 24 to 37** of **toolbars.css**.
+All major sections in the CSS are commented for quick editing.
 
-## 💻 Development
+---
 
-This theme comes with a [counterpart Devcontainer](https://containers.dev/) that will setup a small desktop instance that has all four flavours of Firefox installed (Main, ESR, Developer & Nightly), and they're all configured to enable developer tools for inspecting the Firefox UI, using **Tools** > **Browser tools** > **Browser toolbox**. This also works in **GitHub Codespaces**, and generally anything compatible with the Devcontainer spec.
+## Credits
 
-[There is a blog post about the Devcontainer integration](https://soupbowl.io/2025/01/test-firefox-variants/), if you wish to try this on a theme of your own.
+This project wouldn’t exist without the work of:
 
-## 🌟 Credits
+- **AeroFirefox** by SandTechStuff  
+- **RetroThemesFirefox** by matthewmx86  
+- **Modoki‑Firefox** by soup‑bowl  
 
-* Inspired by **[Modern Modoki theme][mm]**, itself inspired by **Netscape Navigator**.
-* Built upon the base of **[Internet Explorer 6 theme][rf]** by **matthewmx86** (now a theme collection).
-* All functional layouts built upon the amazing foundations of [**Firefox CSS Hacks**][cssh] by **MrOtherGuy**.
+Each provided inspiration, structure, or techniques that Osaka ’09 builds upon.
 
-[rf]:   https://github.com/matthewmx86/RetroThemesFirefox
-[c95]:  https://github.com/grassmunk/Chicago95
-[mm]:   http://lowandsh.web.fc2.com/index.en.html
-[mmm]:  https://addons.palemoon.org/addon/modoki-moon/
-[cssh]: https://github.com/MrOtherGuy/firefox-csshacks
+---
+
+## License
+
+Released under the **[MIT License](guide://action?prefill=Tell%20me%20more%20about%3A%20MIT%20License)** unless otherwise noted.
