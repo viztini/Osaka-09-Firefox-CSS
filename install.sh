@@ -25,4 +25,4 @@ if [ ! -f "$CHROME/userChrome.css" ]; then
     [ -n "$FIRST_CSS" ] && ln -s "$(basename "$FIRST_CSS")" "$CHROME/userChrome.css"
 fi
 
-echo "NervFox installed. Enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in about:config."
+echo "Osaka '09 Firefox CSS installed. Enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in about:config."
