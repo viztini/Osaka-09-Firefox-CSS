@@ -16,7 +16,7 @@ mkdir -p "$CHROME"
 # backup existing userChrome.css
 [ -f "$CHROME/userChrome.css" ] && mv "$CHROME/userChrome.css" "$CHROME/userChrome.css.bak"
 
-# copy NervFox theme files
+# copy Osaka '09 theme files
 cp -r "$THEME_DIR/chrome/"* "$CHROME/"
 
 # ensure userChrome.css exists
