@@ -2,7 +2,7 @@
 
 ![banner](./osaka.png)
 
-Osaka ’09 is a handcrafted Firefox CSS theme inspired by the late‑2000s aesthetic of glossy UI chrome, soft gradients, and playful skeuomorphism. It blends the charm of Windows‑era design with a distinctly Japanese‑influenced retro‑modern vibe — a look that feels like it could’ve shipped on a 2009 ultrabook straight out of Umeda.
+Firefox CSS Theme for retro Gentoo Linux distro, Osaka '09
 
 This theme is built on top of three excellent community projects, remixing their ideas into something new while keeping the spirit of each:
 
