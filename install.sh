@@ -5,13 +5,10 @@ set -euo pipefail
 # Osaka '09 Firefox Theme Installer
 # -------------------------------
 
-# Get the directory of this script
 THEME_DIR="$(cd "$(dirname "$0")" && pwd)"
 
-# Firefox profiles base directory
 FF_BASE="$HOME/.mozilla/firefox"
 
-# Find the default release profile
 PROFILE="$(find "$FF_BASE" -maxdepth 1 -type d -name '*.default-release' | head -n1)"
 
 if [ -z "$PROFILE" ]; then
@@ -19,18 +16,15 @@ if [ -z "$PROFILE" ]; then
     exit 1
 fi
 
-# Chrome folder inside profile
 CHROME="$PROFILE/chrome"
 mkdir -p "$CHROME"
 
-# Backup existing userChrome.css if present
 if [ -f "$CHROME/userChrome.css" ]; then
     BACKUP="$CHROME/userChrome.css.bak.$(date +%Y%m%d%H%M%S)"
     echo "Backing up existing userChrome.css to $BACKUP"
     mv "$CHROME/userChrome.css" "$BACKUP"
 fi
 
-# Copy Osaka '09 theme files
 if [ -d "$THEME_DIR/chrome" ]; then
     echo "Copying Osaka '09 theme files to $CHROME"
     cp -r "$THEME_DIR/chrome/"* "$CHROME/"
@@ -39,7 +33,6 @@ else
     exit 1
 fi
 
-# Ensure userChrome.css exists
 if [ ! -f "$CHROME/userChrome.css" ]; then
     FIRST_CSS="$(find "$CHROME" -maxdepth 1 -type f -name '*.css' | head -n1)"
     if [ -n "$FIRST_CSS" ]; then
