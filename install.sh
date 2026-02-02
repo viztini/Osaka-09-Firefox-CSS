@@ -1,28 +1,54 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
+# -------------------------------
+# Osaka '09 Firefox Theme Installer
+# -------------------------------
+
+# Get the directory of this script
 THEME_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Firefox profiles base directory
 FF_BASE="$HOME/.mozilla/firefox"
+
+# Find the default release profile
 PROFILE="$(find "$FF_BASE" -maxdepth 1 -type d -name '*.default-release' | head -n1)"
 
 if [ -z "$PROFILE" ]; then
-    echo "No default Firefox profile found."
+    echo "Error: No default Firefox profile found." >&2
     exit 1
 fi
 
+# Chrome folder inside profile
 CHROME="$PROFILE/chrome"
 mkdir -p "$CHROME"
 
-# backup existing userChrome.css
-[ -f "$CHROME/userChrome.css" ] && mv "$CHROME/userChrome.css" "$CHROME/userChrome.css.bak"
-
-# copy Osaka '09 theme files
-cp -r "$THEME_DIR/chrome/"* "$CHROME/"
-
-# ensure userChrome.css exists
-if [ ! -f "$CHROME/userChrome.css" ]; then
-    FIRST_CSS="$(find "$CHROME" -maxdepth 1 -name '*.css' | head -n1)"
-    [ -n "$FIRST_CSS" ] && ln -s "$(basename "$FIRST_CSS")" "$CHROME/userChrome.css"
+# Backup existing userChrome.css if present
+if [ -f "$CHROME/userChrome.css" ]; then
+    BACKUP="$CHROME/userChrome.css.bak.$(date +%Y%m%d%H%M%S)"
+    echo "Backing up existing userChrome.css to $BACKUP"
+    mv "$CHROME/userChrome.css" "$BACKUP"
 fi
 
-echo "Osaka '09 Firefox CSS installed. Enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in about:config."
+# Copy Osaka '09 theme files
+if [ -d "$THEME_DIR/chrome" ]; then
+    echo "Copying Osaka '09 theme files to $CHROME"
+    cp -r "$THEME_DIR/chrome/"* "$CHROME/"
+else
+    echo "Error: Theme files not found in $THEME_DIR/chrome" >&2
+    exit 1
+fi
+
+# Ensure userChrome.css exists
+if [ ! -f "$CHROME/userChrome.css" ]; then
+    FIRST_CSS="$(find "$CHROME" -maxdepth 1 -type f -name '*.css' | head -n1)"
+    if [ -n "$FIRST_CSS" ]; then
+        ln -s "$(basename "$FIRST_CSS")" "$CHROME/userChrome.css"
+        echo "Created symlink userChrome.css → $(basename "$FIRST_CSS")"
+    else
+        echo "Warning: No CSS files found to link as userChrome.css"
+    fi
+fi
+
+echo "Osaka '09 Firefox CSS installed successfully."
+echo "Remember to enable 'toolkit.legacyUserProfileCustomizations.stylesheets' in about:config."
