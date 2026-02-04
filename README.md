@@ -1,4 +1,4 @@
-# Osaka ’09 — A Firefox CSS Theme
+# Osaka ’09 | A Retro Firefox CSS Theme
 
 ![banner](./osaka.png)
 
@@ -6,9 +6,9 @@ Firefox CSS Theme for retro Gentoo Linux distro, Osaka '09
 
 This theme is built on top of three excellent community projects, remixing their ideas into something new while keeping the spirit of each:
 
-- **[AeroFirefox](guide://action?prefill=Tell%20me%20more%20about%3A%20AeroFirefox)** — for its glassy translucency and polished Windows‑style chrome  
-- **[RetroThemesFirefox](guide://action?prefill=Tell%20me%20more%20about%3A%20RetroThemesFirefox)** — for its dedication to nostalgic UI design  
-- **[Modoki‑Firefox](guide://action?prefill=Tell%20me%20more%20about%3A%20Modoki%E2%80%91Firefox)** — for its clean structure and modular approach to styling  
+- **[AeroFirefox](guide://action?prefill=Tell%20me%20more%20about%3A%20AeroFirefox)** - for its glassy translucency and polished Windows‑style chrome  
+- **[RetroThemesFirefox](guide://action?prefill=Tell%20me%20more%20about%3A%20RetroThemesFirefox)** - for its dedication to nostalgic UI design  
+- **[Modoki‑Firefox](guide://action?prefill=Tell%20me%20more%20about%3A%20Modoki%E2%80%91Firefox)** - for its clean structure and modular approach to styling  
 
 ---
 
@@ -18,7 +18,7 @@ This theme is built on top of three excellent community projects, remixing their
 - **[Custom tab styling](guide://action?prefill=Tell%20me%20more%20about%3A%20Custom%20tab%20styling)** inspired by Aero‑era window frames  
 - **[Refined toolbar layout](guide://action?prefill=Tell%20me%20more%20about%3A%20Refined%20toolbar%20layout)** with retro spacing and icon proportions  
 - **[Optional translucency effects](guide://action?prefill=Tell%20me%20more%20about%3A%20Optional%20translucency%20effects)** depending on your OS and Firefox setup  
-- **[Lightweight CSS‑only implementation](guide://action?prefill=Tell%20me%20more%20about%3A%20Lightweight%20CSS%E2%80%91only%20implementation)** — no extensions required  
+- **[Lightweight CSS‑only implementation](guide://action?prefill=Tell%20me%20more%20about%3A%20Lightweight%20CSS%E2%80%91only%20implementation)** - no extensions required  
 
 ---
 
