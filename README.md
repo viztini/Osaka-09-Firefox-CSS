@@ -55,7 +55,7 @@ All major sections in the CSS are commented for quick editing.
 
 ---
 
-## Credits
+## Credits ❤️
 
 This project wouldn’t exist without the work of:
 
